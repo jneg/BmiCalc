@@ -27,17 +27,18 @@ void PrintOutput(double bmi) {
    printf("Your BMI is: %.1f\n", bmi);
 
    if (bmi < BMI_UNDERWEIGHT) {
-      printf("You are underweight. (<%f)\n", BMI_UNDERWEIGHT);
+      printf("You are underweight. (<%.1f)\n", BMI_UNDERWEIGHT);
    }
    else if (bmi < BMI_NORMALWEIGHT) {
-      printf("You are normal weight. (%f-%f)\n", BMI_UNDERWEIGHT,
+      printf("You are normal weight. (%.1f-%.1f)\n", BMI_UNDERWEIGHT,
        BMI_NORMALWEIGHT);
    }
    else if (bmi < BMI_OVERWEIGHT) {
-      printf("You are overweight. (%f-%f)\n", BMI_NORMALWEIGHT, BMI_OVERWEIGHT);
+      printf("You are overweight. (%.1f-%.1f)\n", BMI_NORMALWEIGHT,
+       BMI_OVERWEIGHT);
    }
    else {
-      printf("You are obese. (>%f)\n", BMI_OVERWEIGHT);
+      printf("You are obese. (>%.1f)\n", BMI_OVERWEIGHT);
    }
 }
 
