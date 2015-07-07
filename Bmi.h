@@ -1,11 +1,11 @@
 #ifndef BMI_H
 #define BMI_H
 
-// Returns one string from stdin up to ARG_MAX length.
+// Scans a double from stdin and returns it.
 double ParseDouble();
 
-// Computes the BMI from |lbs| and |in|.
-double Bmi(double ins, double lbs);
+// Computes the BMI from |lbs| and |inche|.
+double Bmi(double lbs, double inches);
 
 // Prints the results of |bmi|.
 void PrintOutput(double bmi);

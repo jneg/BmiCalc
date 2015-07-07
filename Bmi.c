@@ -8,7 +8,7 @@ static const double BMI_UNDERWEIGHT = 18.5;
 static const double BMI_NORMALWEIGHT = 24.9;
 static const double BMI_OVERWEIGHT = 29.9;
 
-// Returns one string from stdin up to ARG_MAX length.
+// Scans a double from stdin and returns it.
 double ParseDouble() {
    double dbl;
 
@@ -17,9 +17,9 @@ double ParseDouble() {
    return dbl;
 }
 
-// Computes the BMI from |lbs| and |in|.
-double Bmi(double ins, double lbs) {
-   return lbs * MULTIPLIER / (ins * ins);
+// Computes the BMI from |lbs| and |inches|.
+double Bmi(double lbs, double inches) {
+   return lbs * MULTIPLIER / (inches * inches);
 }
 
 // Prints the results of |bmi|.
@@ -43,7 +43,11 @@ void PrintOutput(double bmi) {
 }
 
 int main(int argc, char **argv) {
-   PrintOutput(Bmi(ParseDouble(), ParseDouble()));
+   double lbs, inches;
+
+   lbs = ParseDouble();
+   inches = ParseDouble();
+   PrintOutput(Bmi(lbs, inches));
 
    return EXIT_SUCCESS;
 }
